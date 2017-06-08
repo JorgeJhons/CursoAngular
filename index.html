@@ -12,12 +12,16 @@
 <body>		
  	<header ng-include="'header.html'"></header>
 		<div class="row">
-			<div class="col-sm-6 col-md-4 col-lg-6">
-				<div ng-controller="NinjaController" class="col-md-4">
+			<div class="col-sm-12 col-md-12 col-lg-6">
+				<div ng-controller="NinjaController" class="col-md-12">
 					<input type="text" class="form-control" ng-model="search" placeholder="Encuentra al ninja">
+					<button class=" btn btn-primary btn-xs" ng-click="order='name'">nombre</button>
+					<button class=" btn btn-primary btn-xs" ng-click="order='cinta'">cinta</button>
 					<ul>
-						<li ng-repeat="ninja in ninjas | orderBy: 'name' | filter: search" ng-show="!ninja.available">
-							{{ninja.name}} - {{ninja.precio | currency}}
+						<li ng-repeat="ninja in ninjas | orderBy: order | filter: search" ng-show="ninja.available">
+							<h3>{{ninja.name}} - {{ninja.precio | currency}}</h3>
+							<div class="remove" ng-click="removeNinja(ninja)">x</div>
+							<span  class="cinta" style="background:{{ninja.cinta}}">Cinta {{ninja.cinta}}</span>
 						</li>
 					</ul>
 				</div>

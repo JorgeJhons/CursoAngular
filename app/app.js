@@ -2,28 +2,34 @@ var myNinjaApp= angular.module('myNinjaApp',[]);
 
 myNinjaApp.controller('NinjaController',function($scope){
 	$scope.message="Hello BRIAN";
+
+	$scope.removeNinja=function(ninja){
+		var removedNinja=$scope.ninjas.indexOf(ninja);
+		$scope.ninjas.splice(removedNinja,1);
+	};
+
 	$scope.ninjas=[
 		{
-			name:"yosh",
-			cinta:"verde",
+			name:"alam",
+			cinta:"cyan",
 			precio:50,
 			available:true
 		},
 		{
-			name:"kayin",
-			cinta:"negra",
+			name:"bebuch",
+			cinta:"blue",
 			precio:60,
 			available:true
 		},
 		{
-			name:"volt",
-			cinta:"dorada",
+			name:"clavin",
+			cinta:"yellow",
 			precio:90,
-			available:false
+			available:true
 		},
 		{
-			name:"redF",
-			cinta:"amarilla",
+			name:"doroty",
+			cinta:"red",
 			precio:100,
 			available:true
 		}
