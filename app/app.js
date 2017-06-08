@@ -5,19 +5,23 @@ myNinjaApp.controller('NinjaController',function($scope){
 	$scope.ninjas=[
 		{
 			name:"yosh",
-			cinta:"verde"
+			cinta:"verde",
+			precio:50
 		},
 		{
 			name:"kayin",
-			cinta:"negra"
+			cinta:"negra",
+			precio:60
 		},
 		{
 			name:"volt",
-			cinta:"dorada"
+			cinta:"dorada",
+			precio:90
 		},
 		{
 			name:"redF",
-			cinta:"amarilla"
+			cinta:"amarilla",
+			precio:100
 		}
 	];
 });
