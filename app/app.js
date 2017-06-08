@@ -6,22 +6,26 @@ myNinjaApp.controller('NinjaController',function($scope){
 		{
 			name:"yosh",
 			cinta:"verde",
-			precio:50
+			precio:50,
+			available:true
 		},
 		{
 			name:"kayin",
 			cinta:"negra",
-			precio:60
+			precio:60,
+			available:true
 		},
 		{
 			name:"volt",
 			cinta:"dorada",
-			precio:90
+			precio:90,
+			available:false
 		},
 		{
 			name:"redF",
 			cinta:"amarilla",
-			precio:100
+			precio:100,
+			available:true
 		}
 	];
 });
