@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" ng-app>
+<html lang="es" ng-app="myNinjaApp">
 <head>
 <meta charset="utf-8">
 	<meta charset="utf-8">
@@ -9,15 +9,15 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 	<title>Buscador de ninjas</title>
 </head>
-<body ng-init="meats=['puesko','jamon','pan']">
-	<input type="text" ng-model="favMeat" placeholder="ingresa tu comida favorita">
-	<p>Tu comida favorita es : {{meats[1]}}</p>
-	
-
+<body>		
+	<div ng-controller="NinjaController">
+		<ul>
+			<li ng-repeat="ninja in ninjas">{{ninja}}</li>
+		</ul>
+	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-route.js"></script>
-	<script src="principal.js"></script>
-	<script src="loginDirective.js"></script>
+	<script src="app/app.js"></script>
 </body>
 </html>
