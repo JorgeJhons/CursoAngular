@@ -11,32 +11,7 @@
 </head>
 <body>		
  	<header ng-include="'header.html'"></header>
-		<div class="row">
-			<div class="col-sm-12 col-md-12 col-lg-6">
-				<div ng-controller="NinjaController" class="col-md-12">
-					<input type="text" class="form-control" ng-model="search" placeholder="Encuentra al ninja">
-					<button class=" btn btn-primary btn-xs col-md-6" ng-click="order='name'">nombre</button>
-					<button class=" btn btn-primary btn-xs col-md-6" ng-click="order='cinta'">cinta</button>
-					<ul>
-						<li ng-repeat="ninja in ninjas | orderBy: order | filter: search" ng-show="ninja.available">
-							<img ng-src="{{ninja.thumb}}" style="margin: -12px 10px 0 0; float: left; width: 50px; border-radius: 50%">
-							<h3>{{ninja.name}} - {{ninja.precio | currency}}</h3>
-							<div class="remove" ng-click="removeNinja(ninja)">x</div>
-							<span  class="cinta" style="background:{{ninja.cinta}}">Cinta {{ninja.cinta}}</span>
-						</li>
-					</ul>
-					<form ng-submit="AddNinja()">
-						<input type="text" placeholder="nombre" ng-model="newNinja.name"/>
-						<input type="text" placeholder="precio" ng-model="newNinja.precio"/>
-						<input type="text" placeholder="cinta" ng-model="newNinja.cinta"/>
-						<input type="submit" value="Agregar nuevo ninja"/>
-					</form>
-				</div>
-			</div>
-		</div>
-
-
-
+		<div ng-view></div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-route.js"></script>
 	<script src="app/app.js"></script>

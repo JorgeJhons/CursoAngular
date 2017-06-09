@@ -1,4 +1,19 @@
-var myNinjaApp= angular.module('myNinjaApp',[]);
+var myNinjaApp= angular.module('myNinjaApp',['ngRoute']);
+
+myNinjaApp.config(['$routeProvider',function($routeProvider){
+
+	$routeProvider
+	.when('/home',{
+		templateUrl:'views/home.html'
+	})
+	.when('/ninjas',{
+		templateUrl:'views/ninjas.html',
+		controller:'NinjaController'
+	})	
+	.otherwise({
+		redirecTo:'/home'
+	});
+}]);
 
 myNinjaApp.controller('NinjaController',function($scope){
 	$scope.message="Hello BRIAN";
