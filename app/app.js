@@ -26,25 +26,29 @@ myNinjaApp.controller('NinjaController',function($scope){
 			name:"alam",
 			cinta:"cyan",
 			precio:50,
-			available:true
+			available:true,
+			thumb:"content/img/1.png"
 		},
 		{
 			name:"bebuch",
 			cinta:"blue",
 			precio:60,
-			available:true
+			available:true,
+			thumb:"content/img/2.png"
 		},
 		{
 			name:"clavin",
 			cinta:"yellow",
 			precio:90,
-			available:true
+			available:true,
+			thumb:"content/img/3.png"
 		},
 		{
 			name:"doroty",
 			cinta:"red",
 			precio:100,
-			available:true
+			available:true,
+			thumb:"content/img/4.png"
 		}
 	];
 });
