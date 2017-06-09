@@ -8,6 +8,16 @@ myNinjaApp.controller('NinjaController',function($scope){
 		$scope.ninjas.splice(removedNinja,1);
 	};
 
+	$scope.AddNinja=function(){
+		$scope.ninjas.push({
+			name: $scope.newNinja.name,
+			cinta: $scope.newNinja.cinta,
+			precio:parseInt($scope.newNinja.precio),
+			available:true
+
+		});
+	};
+
 	$scope.ninjas=[
 		{
 			name:"alam",

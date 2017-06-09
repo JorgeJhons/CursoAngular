@@ -15,8 +15,8 @@
 			<div class="col-sm-12 col-md-12 col-lg-6">
 				<div ng-controller="NinjaController" class="col-md-12">
 					<input type="text" class="form-control" ng-model="search" placeholder="Encuentra al ninja">
-					<button class=" btn btn-primary btn-xs" ng-click="order='name'">nombre</button>
-					<button class=" btn btn-primary btn-xs" ng-click="order='cinta'">cinta</button>
+					<button class=" btn btn-primary btn-xs col-md-6" ng-click="order='name'">nombre</button>
+					<button class=" btn btn-primary btn-xs col-md-6" ng-click="order='cinta'">cinta</button>
 					<ul>
 						<li ng-repeat="ninja in ninjas | orderBy: order | filter: search" ng-show="ninja.available">
 							<h3>{{ninja.name}} - {{ninja.precio | currency}}</h3>
@@ -24,6 +24,12 @@
 							<span  class="cinta" style="background:{{ninja.cinta}}">Cinta {{ninja.cinta}}</span>
 						</li>
 					</ul>
+					<form ng-submit="AddNinja()">
+						<input type="text" placeholder="nombre" ng-model="newNinja.name"/>
+						<input type="text" placeholder="precio" ng-model="newNinja.cinta"/>
+						<input type="text" placeholder="cinta" ng-model="newNinja.precio"/>
+						<input type="submit" value="Agregar nuevo ninja"/>
+					</form>
 				</div>
 			</div>
 		</div>
