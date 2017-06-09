@@ -16,6 +16,9 @@ myNinjaApp.controller('NinjaController',function($scope){
 			available:true
 
 		});
+		$scope.newNinja.name="";
+		$scope.newNinja.cinta="";
+		$scope.newNinja.precio="";
 	};
 
 	$scope.ninjas=[
